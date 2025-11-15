@@ -1,0 +1,119 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id         String  @id @default(uuid())
+  userId     String  @unique
+  email      String  @unique
+  password   String
+  isVerified Boolean @default(false)
+
+  verifyToken  String?
+  verifyOtp    Int?
+  verifyExpiry DateTime?
+
+  forgottenToken  String?
+  forgottenOtp    Int?
+  forgottenExpiry DateTime?
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id   String @id @default(uuid())
+  name String
+  role Role   @default(USER)
+
+  avatar String?
+
+  address     String?
+  dateOfBirth DateTime?
+  language    String?
+
+  account Account?
+}
+
+
+model AggrementInfo {
+  id        String            @id @default(uuid())
+  type      AggrementInfoType
+  role      Role
+  title     String
+  content   String
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @default(now()) @updatedAt
+
+  @@unique([type, role])
+}
+
+model Airlines {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  submissions Submission[]
+}
+
+model Assessment {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  submissions Submission[]
+}
+
+model Submission {
+  id           String               @id @default(cuid())
+  deviceId     String
+  date         DateTime             @default(now())
+  selectedYear DateTime?
+  status       AssessmentStatus
+  createdAt    DateTime             @default(now())
+  updatedAt    DateTime             @updatedAt
+
+  airlineId    String
+  airline      Airlines             @relation(fields: [airlineId], references: [id], onDelete: Cascade)
+
+  assessments  Assessment[]
+}
+
+model Payment {
+  id             String       @id @default(cuid())
+  transactionId  String       @unique
+  amount Int
+  name String
+  email String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+}
+
+enum PackageType {
+  YEARLY
+  MONTHLY
+}
+
+enum AssessmentStatus {
+  PASS
+  FAIL
+}
+
+
+
+enum AggrementInfoType {
+  PRIVACY_POLICY
+  TERMS_CONDITION
+  ABOUT_US
+}
+
+enum Role {
+  ADMIN
+  USER
+}

@@ -1,0 +1,1430 @@
+{
+	"info": {
+		"_postman_id": "87464bac-5885-446a-b885-fc9da17adcfc",
+		"name": "qemu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40980735",
+		"_collection_link": "https://sparktech-0933.postman.co/workspace/Sparktech-Workspace~dae05d43-4f51-4d90-87f1-5e2162599979/collection/40980735-87464bac-5885-446a-b885-fc9da17adcfc?action=share&source=collection_link&creator=40980735"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Billal Hossain\",\n    \"email\": \"qagpt5@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/signup",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"u62m9pqysr@wnbaldwy.com\",\n    \"password\": \"12345678\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/login",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify with otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\": 369040\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/verify-otp",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify with token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/auth/verify/ddf3bfbe0fd174c521e6a68127dc01d6eb14d152778f4cd77a0a5d0fa642b530",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"verify",
+								"ddf3bfbe0fd174c521e6a68127dc01d6eb14d152778f4cd77a0a5d0fa642b530"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotten-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"u62m9pqysr@wnbaldwy.com\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/forgot-password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotten-password otp verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"billal@gmail.com\",\n    \"otp\": 148223\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/forgot-password/otp",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password",
+								"otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset by otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\": 554855\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/reset-password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset by token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"12345678\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/auth/reset-password/09fe6241a390dae269b4b4d2027681cee1efb671a6f673b423b955d4c51d200a",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"reset-password",
+								"09fe6241a390dae269b4b4d2027681cee1efb671a6f673b423b955d4c51d200a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/auth/logout",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer token",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/auth/refresh-token",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "agreements",
+					"item": [
+						{
+							"name": "Privacy policy",
+							"item": [
+								{
+									"name": "get",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/privacy&policy",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"privacy&policy"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/privacy&policy",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"privacy&policy"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Terms & conditions",
+							"item": [
+								{
+									"name": "get",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/terms&conditions",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"terms&conditions"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/terms&conditions",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"terms&conditions"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "About us",
+							"item": [
+								{
+									"name": "get",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/about-us",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"about-us"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/about-us",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"about-us"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "support",
+							"item": [
+								{
+									"name": "get",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/support",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"support"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseURL}}/aggrements/support",
+											"host": [
+												"{{baseURL}}"
+											],
+											"path": [
+												"aggrements",
+												"support"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "get",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "type",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"PRIVACY_POLICY\" // PRIVACY_POLICY, TERMS_CONDITION, ABOUT_US\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/agreements",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"agreements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "type",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"PRIVACY_POLICY\", // PRIVACY_POLICY, TERMS_CONDITION, ABOUT_US\n    \"title\": \"Privacy & policy\",\n    \"role\": \"USER\", // ADMIN | USER | RIDER\n    \"content\": \"lorem TERMS_CONDITION\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/agreements",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"agreements"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "type",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"PRIVACY_POLICY\", // PRIVACY_POLICY, TERMS_CONDITION, ABOUT_US\n    \"title\": \"Privacy & policy\",\n    \"role\": \"USER\", // ADMIN | USER | RIDER\n    \"content\": \"lorem TERMS_CONDITION f\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/agreements/f8f9f602-e4f3-4aa5-8bee-010ecc5aba68",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"agreements",
+										"f8f9f602-e4f3-4aa5-8bee-010ecc5aba68"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "postman-cloud:///1eff5cd1-92ff-4990-8f37-494eebdf4080"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/profile/avatar",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"profile",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "udpate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Billal Hossain\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload licence",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "license",
+									"type": "file",
+									"src": "/home/billal-hossain/Documents/license-demo.jpg"
+								},
+								{
+									"key": "side",
+									"value": "BACK",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/profile/upload-license",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"profile",
+								"upload-license"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-password",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"123456789\",\n    \"newPassword\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/profile/change-password",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"profile",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "additional info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"Mohammadpur, Dhaka 1230\",\n    \"type\": \"CAR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/profile/additional-info",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"profile",
+								"additional-info"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "airlines",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/airlines/68834d22ca7d5cd4fe5bc661",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"airlines",
+								"68834d22ca7d5cd4fe5bc661"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/airlines",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"airlines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"london\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/airlines",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"airlines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"japan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/airlines/68847776c7fe77b6a4c16864",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"airlines",
+								"68847776c7fe77b6a4c16864"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"bangladesh\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/airlines/68847c88fed3137abd38c77a",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"airlines",
+								"68847c88fed3137abd38c77a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/airlines/search?airline=bangdesh",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"airlines",
+								"search"
+							],
+							"query": [
+								{
+									"key": "airline",
+									"value": "bangdesh"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "assessment",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/assessments",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"assessments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/assessments/6884688a3decdb76aab81061",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"assessments",
+								"6884688a3decdb76aab81061"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/assessments/search?assessment=bang",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"assessments",
+								"search"
+							],
+							"query": [
+								{
+									"key": "assessment",
+									"value": "bang"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"delevery\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/assessments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"assessments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"assessment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/assessments/68847beffed3137abd38c773",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"assessments",
+								"68847beffed3137abd38c773"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"bangladesh\"\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/assessments/68c79ec52d8c9801b0faecb7",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"assessments",
+								"68c79ec52d8c9801b0faecb7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "statistics",
+			"item": [
+				{
+					"name": "mobile",
+					"item": [
+						{
+							"name": "overview",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/statistics/airlines-overview?name=bangladesh&date=2025-10",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"statistics",
+										"airlines-overview"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "bangladesh"
+										},
+										{
+											"key": "date",
+											"value": "2025-10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "by pass rate",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/statistics/top-airlines-pass-rate?name=bangladesh&date=2025-08-27T05:19:40.089Z",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"statistics",
+										"top-airlines-pass-rate"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "bangladesh"
+										},
+										{
+											"key": "date",
+											"value": "2025-08-27T05:19:40.089Z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "top airlines",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseURL}}/statistics/top-airlines-submission?name=us&date=2025-08",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"statistics",
+										"top-airlines-submission"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "us"
+										},
+										{
+											"key": "date",
+											"value": "2025-08"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "submission",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/submissions/get/68adc2e5ac0911bc824db7f6",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"submissions",
+								"get",
+								"68adc2e5ac0911bc824db7f6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/submissions?_start=0&_end=1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"submissions"
+							],
+							"query": [
+								{
+									"key": "_start",
+									"value": "0"
+								},
+								{
+									"key": "_end",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get by device id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/submissions/ssdfdsdfsdsdfsfg",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"submissions",
+								"ssdfdsdfsdsdfsfg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/submissions/search?airline=bangladesh",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"submissions",
+								"search"
+							],
+							"query": [
+								{
+									"key": "airline",
+									"value": "bangladesh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"SubmissionDate\", new Date().toISOString());"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"deviceId\": \"ssdsadfsdfg\",\n  \"airlineId\": \"cmgta7o5l0007o2dhqk6t1thf\",\n  \"date\": \"{{SubmissionDate}}\",\n  \"assessments\": [\n    \"cmgq1rrbl0000mxj0250j9k27\"\n  ],\n  \"status\": \"FAIL\"\n}\n// {\"deviceId\":\"SDFsmentsdfsdfSDF\",\"selectedAirline\":\"us\",\"selectedYear\":1757391907131,\"assessments\":[{\"name\":\"delevery\",\"status\":\"PASS\"},{\"name\":\"time\",\"status\":\"FAIL\"},{\"name\":\"packet\",\"status\":\"FAIL\"},{\"name\":\"test\",\"status\":\"PASS\"},{\"name\":\"need\",\"status\":\"FAIL\"}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/submissions",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"submissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/submissions/68c7b7549c342fa7ec21db29",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"submissions",
+								"68c7b7549c342fa7ec21db29"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "payment",
+			"item": [
+				{
+					"name": "get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/payment",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/payment/68848bd410d3f090ad144ea2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"payment",
+								"68848bd410d3f090ad144ea2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/payment/68848bd410d3f090ad144ea2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"payment",
+								"68848bd410d3f090ad144ea2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transactionId\": \"TX12345l6\",\n  \"accountNumber\": 987654321,\n  \"package\": \"MONTHLY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/payment",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transactionId\": \"TX123456\",\n  \"accountNumber\": 987654321,\n  \"package\": \"MONTHLY\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/payment/search?query=34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"payment",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "34"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pay",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/payment/create-payment",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"payment",
+								"create-payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://51.21.200.101:3000"
+		}
+	]
+}

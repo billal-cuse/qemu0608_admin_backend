@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Forgot Password OTP</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f4;">
+<table cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f4f4f4; padding: 20px 0;" width="100%">
+    <tr>
+        <td align="center">
+            <!-- Main Container -->
+            <table cellpadding="0" cellspacing="0" role="presentation" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);" width="600">
+
+                <!-- Header -->
+                <tr>
+                    <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
+                        <h1 style="margin: 0 0 10px 0; font-size: 28px; font-weight: 700; color: #ffffff;">🔑 Forgot Your Password?</h1>
+                        <p style="margin: 0; font-size: 16px; color: #ffffff;">Use the OTP below to reset your password</p>
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding: 40px 30px;">
+
+                        <!-- Greeting -->
+                        <p style="margin: 0 0 20px 0; font-size: 18px; color: #333333;">Hello, <%= name %>!</p>
+
+                        <!-- Message -->
+                        <p style="margin: 0 0 30px 0; font-size: 16px; color: #666666; line-height: 1.6;">
+                            We received a request to reset your password. Please use the One-Time Password (OTP) below to complete the process. If you didn’t request a password reset, you can safely ignore this email.
+                        </p>
+
+                        <!-- OTP Section -->
+                        <table cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f5f7fa; border-radius: 8px; margin-bottom: 30px;" width="100%">
+                            <tr>
+                                <td style="padding: 30px; text-align: center;">
+                                    <p style="margin: 0 0 15px 0; font-size: 12px; color: #666666; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Your OTP Code</p>
+                                    <p style="margin: 0 0 10px 0; font-size: 36px; font-weight: 700; color: #667eea; letter-spacing: 8px; font-family: 'Courier New', monospace;"><%= otp %></p>
+                                    <p style="margin: 0; font-size: 13px; color: #999999;">Enter this code on the password reset page</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Divider -->
+                        <table cellpadding="0" cellspacing="0" role="presentation" style="margin: 30px 0;" width="100%">
+                            <tr>
+                                <td style="border-bottom: 1px solid #dddddd; width: 45%;"></td>
+                                <td style="padding: 0 15px; text-align: center; font-size: 14px; color: #999999; font-weight: 600; width: 10%;">OR</td>
+                                <td style="border-bottom: 1px solid #dddddd; width: 45%;"></td>
+                            </tr>
+                        </table>
+
+                        <!-- Reset Password Button -->
+                        <table cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tr>
+                                <td align="center" style="padding: 0;">
+                                    <a href="https://dashboard.passrate.app/auth/reset?token=<%= token %>" style="display: inline-block; width: 100%; max-width: 540px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 600; text-align: center;">🔒 Reset Your Password</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Expiry Note -->
+                        <table cellpadding="0" cellspacing="0" role="presentation" style="margin-top: 30px;" width="100%">
+                            <tr>
+                                <td style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 4px;">
+                                    <p style="margin: 0; font-size: 14px; color: #856404;">⏰ <strong>Note:</strong> This OTP is valid for 5 minutes. Please don’t share it with anyone for your account security.</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Security Note -->
+                        <p style="margin: 20px 0 0 0; font-size: 12px; color: #999999;">
+                            If you didn’t request this password reset, no further action is required. Your account will remain secure.
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color: #f8f9fa; padding: 30px; text-align: center;">
+                        <p style="margin: 0 0 10px 0; font-size: 14px; color: #666666; font-weight: 600;">Need Help?</p>
+                        <p style="margin: 0 0 20px 0; font-size: 14px; color: #666666;">Contact us at <a href="mailto:support@example.com" style="color: #667eea; text-decoration: none;">support@example.com</a></p>
+                        <p style="margin: 0; font-size: 14px; color: #999999;">© 2024 Your Company. All rights reserved.</p>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

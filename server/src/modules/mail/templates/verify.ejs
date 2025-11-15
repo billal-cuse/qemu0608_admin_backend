@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Account</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f4f4f4;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4; padding: 20px 0;">
+    <tr>
+        <td align="center">
+            <!-- Main Container -->
+            <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+
+                <!-- Header -->
+                <tr>
+                    <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
+                        <h1 style="margin: 0 0 10px 0; font-size: 28px; font-weight: 700; color: #ffffff;">🔐 Verify Your Account</h1>
+                        <p style="margin: 0; font-size: 16px; color: #ffffff;">Complete your verification to get started</p>
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding: 40px 30px;">
+
+                        <!-- Greeting -->
+                        <p style="margin: 0 0 20px 0; font-size: 18px; color: #333333;">Hello, <%= name %>!</p>
+
+                        <!-- Message -->
+                        <p style="margin: 0 0 30px 0; font-size: 16px; color: #666666; line-height: 1.6;">
+                            Thank you for signing up! To complete your registration and secure your account, please verify your email address using the code or button below.
+                        </p>
+
+                        <!-- OTP Section -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f7fa; border-radius: 8px; margin-bottom: 30px;">
+                            <tr>
+                                <td style="padding: 30px; text-align: center;">
+                                    <p style="margin: 0 0 15px 0; font-size: 12px; color: #666666; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Your Verification Code</p>
+                                    <p style="margin: 0 0 10px 0; font-size: 36px; font-weight: 700; color: #667eea; letter-spacing: 8px; font-family: 'Courier New', monospace;"><%= otp %></p>
+                                    <p style="margin: 0; font-size: 13px; color: #999999;">Select and copy this code</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Divider -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+                            <tr>
+                                <td style="border-bottom: 1px solid #dddddd; width: 45%;"></td>
+                                <td style="padding: 0 15px; text-align: center; font-size: 14px; color: #999999; font-weight: 600; width: 10%;">OR</td>
+                                <td style="border-bottom: 1px solid #dddddd; width: 45%;"></td>
+                            </tr>
+                        </table>
+
+                        <!-- Verify Button -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td align="center" style="padding: 0;">
+                                    <a href="http://localhost:3000/auth/verify/<%= token %>" style="display: inline-block; width: 100%; max-width: 540px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; text-decoration: none; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 600; text-align: center;">✓ Verify Email Address</a>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Expiry Note -->
+                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 30px;">
+                            <tr>
+                                <td style="background-color: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 4px;">
+                                    <p style="margin: 0; font-size: 14px; color: #856404;">⏰ <strong>Important:</strong> This verification code will expire in 5 minutes for security reasons.</p>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <!-- Security Note -->
+                        <p style="margin: 20px 0 0 0; font-size: 12px; color: #999999;">
+                            If you didn't request this verification, please ignore this email or contact our support team.
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color: #f8f9fa; padding: 30px; text-align: center;">
+                        <p style="margin: 0 0 10px 0; font-size: 14px; color: #666666; font-weight: 600;">Need Help?</p>
+                        <p style="margin: 0 0 20px 0; font-size: 14px; color: #666666;">Contact us at <a href="mailto:support@example.com" style="color: #667eea; text-decoration: none;">support@example.com</a></p>
+                        <p style="margin: 0; font-size: 14px; color: #999999;">© 2024 Your Company. All rights reserved.</p>
+                    </td>
+                </tr>
+
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
